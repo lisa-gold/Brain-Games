@@ -6,3 +6,6 @@
 
 ### Record - brain-even
 https://asciinema.org/a/cKBLPg30BMvG3vXlYB53VQqKz
+
+### Record - brain-calc
+https://asciinema.org/a/tRNlD2u6CWyHYHD5t22APbBp7
