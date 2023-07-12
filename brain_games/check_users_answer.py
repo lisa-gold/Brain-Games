@@ -18,7 +18,7 @@ def accept_users_answer():
 
 
 def right_answer(number):
-    if give_question() % 2 == 0:
+    if number % 2 == 0:
         right_answer = 'yes'
     else:
         right_answer = 'no'
