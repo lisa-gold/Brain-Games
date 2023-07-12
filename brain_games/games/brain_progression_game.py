@@ -7,40 +7,48 @@ def introduce_rules():
     print('What number is missing in the progression?')
 
 
-def identify_place(lenth):
-    place = randint(0, lenth - 1)
-    return place
-
-
 def show_progression(lenth, arr):
-    random_place = identify_place(lenth)
+    random_place = randint(0, lenth - 1)
     arr_clone = arr[:]
     arr_clone[random_place] = '..'
     result_to_show = ''
-    for i in range(len(arr_clone)):
+    for i in range(len(arr) - 1):
         result_to_show = result_to_show + str(arr_clone[i]) + ' '
     print(f'Question: {result_to_show}')
     return result_to_show, random_place
 
 
+def positive_progression(first_number, lenth, progressor):
+    result = [first_number]
+    for i in range(1, lenth):
+        new_value = first_number + progressor * i
+        result.append(new_value)
+    return result
+
+
+def negative_progression(first_number, lenth, progressor):
+    result = [first_number]
+    for i in range(1, lenth - 1):
+        new_value = first_number - progressor * i
+        result.append(new_value)
+    return result
+
+
 def give_question():
-    random_number_1 = randint(0, 99)
+    number = randint(0, 99)
     random_progressor = randint(0, 9)
     random_lenth = randint(5, 15)
     random_operation_index = randint(1, 2)
-    result = [random_number_1]
+
     if random_operation_index == 1:
-        for i in range(1, random_lenth):
-            new_value = random_number_1 + random_progressor * i
-            result.append(new_value)
+        result = positive_progression(number, random_lenth, random_progressor)
     else:
-        for i in range(1, random_lenth):
-            new_value = random_number_1 - random_progressor * i
-            result.append(new_value)
+        result = negative_progression(number, random_lenth, random_progressor)
+
     progression = show_progression(random_lenth, result)
-    result_to_show = progression[0]
-    random_place = progression[1]
-    return result, random_place
+    place = progression[1]
+
+    return result, place
 
 
 def check_answer(users_name):
