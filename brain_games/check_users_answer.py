@@ -17,7 +17,7 @@ def accept_users_answer():
     return user_answer
 
 
-def right_answer():
+def right_answer(number):
     if give_question() % 2 == 0:
         right_answer = 'yes'
     else:
@@ -30,19 +30,15 @@ def check_answer(users_name):
     while i <= number_of_tries:
         number = give_question()
         answer = accept_users_answer()
+        correct_answer = right_answer(number)
 
-        if number % 2 == 0:
-            right_answer = 'yes'
-        else:
-            right_answer = 'no'
-
-        if right_answer == answer:
+        if correct_answer == answer:
             print('Correct!')
             i = i + 1
             continue
         else:
             print(f'''
-            {answer} is wrong answer ;(. Correct answer was {right_answer}
+            {answer} is wrong answer ;(. Correct answer was {correct_answer}
             Let\'s try again, {users_name}!
             ''')
             i = 1
