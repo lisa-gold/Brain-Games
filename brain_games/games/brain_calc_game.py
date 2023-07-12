@@ -45,8 +45,8 @@ def check_answer(users_name):
             continue
         else:
             print(f'''
-            {answer} is wrong answer ;(. Correct answer was {right_answer}
-            Let\'s try again, {users_name}!
+'{answer}' is wrong answer ;(. Correct answer was '{right_answer}'
+Let\'s try again, {users_name}!
             ''')
             i = 1
             continue

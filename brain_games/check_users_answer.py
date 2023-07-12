@@ -39,7 +39,7 @@ def check_answer(users_name):
         else:
             print(f'''
 '{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'
-            Let\'s try again, {users_name}!
+Let\'s try again, {users_name}!
             ''')
             i = 1
             continue
