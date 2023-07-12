@@ -28,7 +28,7 @@ def positive_progression(first_number, lenth, progressor):
 
 def negative_progression(first_number, lenth, progressor):
     result = [first_number]
-    for i in range(1, lenth - 1):
+    for i in range(1, lenth):
         new_value = first_number - progressor * i
         result.append(new_value)
     return result
