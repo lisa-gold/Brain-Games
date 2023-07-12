@@ -13,6 +13,12 @@ def show_progression(arr):
         result_to_show = result_to_show + str(arr[i]) + ' '
     return result_to_show
 
+
+def identify_place(lenth):
+    place = randint(0, lenth - 1)
+    return place
+
+
 def give_question():
     random_number_1 = randint(0, 99)
     random_progressor = randint(0, 9)
@@ -27,7 +33,7 @@ def give_question():
         for i in range(1, random_lenth):
             new_value = random_number_1 - random_progressor * i
             result.append(new_value)
-    random_place = randint(0, random_lenth - 1)
+    random_place = identify_place(random_lenth)
     result_clone = result[:]
     result_clone[random_place] = '..'
     result_to_show = show_progression(result_clone)
