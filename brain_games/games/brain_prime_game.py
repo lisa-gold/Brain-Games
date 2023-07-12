@@ -19,12 +19,13 @@ def right_answer(number):
         if number % divider == 0:
             result = 1
             break
-        else:
-            continue
+        continue
 
     if result == 0:
-        return 'yes'
-    return 'no'
+        right_answer = 'yes'
+    else:
+        right_answer = 'no'
+    return right_answer
 
 
 def check_answer(users_name):
