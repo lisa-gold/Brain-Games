@@ -11,6 +11,7 @@ def show_progression(arr):
     result_to_show = ''
     for i in range(len(arr)):
         result_to_show = result_to_show + str(arr[i]) + ' '
+    print(f'Question: {result_to_show}')
     return result_to_show
 
 
@@ -37,7 +38,6 @@ def give_question():
     result_clone = result[:]
     result_clone[random_place] = '..'
     result_to_show = show_progression(result_clone)
-    print(f'Question: {result_to_show}')
     return result, random_place
 
 
