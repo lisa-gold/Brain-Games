@@ -2,7 +2,7 @@ import prompt
 
 
 # number of correct answers needed
-number_of_tries = 3
+NUMBER_OF_TRIES = 3
 
 
 def greet():

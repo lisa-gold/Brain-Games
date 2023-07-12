@@ -1,5 +1,5 @@
 from random import randint
-from brain_games.all_games import number_of_tries
+from brain_games.all_games import NUMBER_OF_TRIES
 from brain_games.all_games import accept_users_answer
 
 
@@ -30,7 +30,7 @@ def right_answer(number):
 
 def check_answer(users_name):
     i = 1
-    while i <= number_of_tries:
+    while i <= NUMBER_OF_TRIES:
         number = give_question()
         answer = accept_users_answer()
         correct_answer = right_answer(number)

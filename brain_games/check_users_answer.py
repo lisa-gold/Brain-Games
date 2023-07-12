@@ -3,7 +3,7 @@ from random import randint
 
 
 # number of correct answers needed
-number_of_tries = 3
+NUMBER_OF_TRIES = 3
 
 
 def give_question():
@@ -17,25 +17,20 @@ def accept_users_answer():
     return user_answer
 
 
-'''def right_answer(number):
+def right_answer(number):
     if number % 2 == 0:
         right_answer = 'yes'
     else:
         right_answer = 'no'
-    return right_answer'''
+    return right_answer
 
 
 def check_answer(users_name):
     i = 1
-    while i <= number_of_tries:
+    while i <= NUMBER_OF_TRIES:
         number = give_question()
         answer = accept_users_answer()
-#        correct_answer = right_answer(number)
-
-        if number % 2 == 0:
-            correct_answer = 'yes'
-        else:
-            correct_answer = 'no'
+        correct_answer = right_answer(number)
 
         if correct_answer == answer:
             print('Correct!')
@@ -43,7 +38,7 @@ def check_answer(users_name):
             continue
         else:
             print(f'''
-            {answer} is wrong answer ;(. Correct answer was {correct_answer}
+'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'
             Let\'s try again, {users_name}!
             ''')
             i = 1

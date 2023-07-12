@@ -1,6 +1,6 @@
 from random import randint
 from math import gcd
-from brain_games.all_games import number_of_tries
+from brain_games.all_games import NUMBER_OF_TRIES
 from brain_games.all_games import accept_users_answer
 
 
@@ -17,7 +17,7 @@ def give_question():
 
 def check_answer(users_name):
     i = 1
-    while i <= number_of_tries:
+    while i <= NUMBER_OF_TRIES:
         question = give_question()
         number_1 = question[0]
         number_2 = question[1]

@@ -1,5 +1,5 @@
 from random import randint
-from brain_games.all_games import number_of_tries
+from brain_games.all_games import NUMBER_OF_TRIES
 from brain_games.all_games import accept_users_answer
 
 
@@ -53,7 +53,7 @@ def give_question():
 
 def check_answer(users_name):
     i = 1
-    while i <= number_of_tries:
+    while i <= NUMBER_OF_TRIES:
         question = give_question()
         answer = int(accept_users_answer())
         random_place = question[1]
