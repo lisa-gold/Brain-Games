@@ -7,17 +7,20 @@ def introduce_rules():
     print('What number is missing in the progression?')
 
 
-def show_progression(arr):
-    result_to_show = ''
-    for i in range(len(arr)):
-        result_to_show = result_to_show + str(arr[i]) + ' '
-    print(f'Question: {result_to_show}')
-    return result_to_show
-
-
 def identify_place(lenth):
     place = randint(0, lenth - 1)
     return place
+
+
+def show_progression(lenth, arr):
+    random_place = identify_place(lenth)
+    arr_clone = arr[:]
+    arr_clone[random_place] = '..'
+    result_to_show = ''
+    for i in range(len(arr_clone)):
+        result_to_show = result_to_show + str(arr_clone[i]) + ' '
+    print(f'Question: {result_to_show}')
+    return result_to_show, random_place
 
 
 def give_question():
@@ -34,10 +37,9 @@ def give_question():
         for i in range(1, random_lenth):
             new_value = random_number_1 - random_progressor * i
             result.append(new_value)
-    random_place = identify_place(random_lenth)
-    result_clone = result[:]
-    result_clone[random_place] = '..'
-    result_to_show = show_progression(result_clone)
+    progression = show_progression(random_lenth, result)
+    result_to_show = progression[0]
+    random_place = progression[1]
     return result, random_place
 
 
