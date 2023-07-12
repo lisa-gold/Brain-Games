@@ -9,3 +9,6 @@ https://asciinema.org/a/cKBLPg30BMvG3vXlYB53VQqKz
 
 ### Record - brain-calc
 https://asciinema.org/a/tRNlD2u6CWyHYHD5t22APbBp7
+
+### Record - brain-gcd
+https://asciinema.org/a/yy0kbAZE8xpLMpDPWbFD0bzy5
