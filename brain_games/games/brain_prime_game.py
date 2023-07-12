@@ -23,10 +23,8 @@ def right_answer(number):
             continue
 
     if result == 0:
-        right_answer = 'yes'
-    else:
-        right_answer = 'no'
-    return right_answer
+        return 'yes'
+    return 'no'
 
 
 def check_answer(users_name):
