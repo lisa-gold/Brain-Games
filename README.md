@@ -15,3 +15,6 @@ https://asciinema.org/a/yy0kbAZE8xpLMpDPWbFD0bzy5
 
 ### Record - brain-progression
 https://asciinema.org/a/eGnnjn2W3CHszmZDOwoh2BoGV
+
+### Record - brain-prime
+https://asciinema.org/a/DU2atl86N5L5TVr6MFHnjCWxC
