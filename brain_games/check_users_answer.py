@@ -42,6 +42,7 @@ def check_answer(users_name):
 Let\'s try again, {users_name}!
             ''')
             i = 1
-            continue
+            return 
+            break
 
     return print(f'Congratulations, {users_name}!')
