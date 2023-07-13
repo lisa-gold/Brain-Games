@@ -15,7 +15,7 @@ def give_question():
 
 def right_answer(number):
     result = 0
-    for divider in range(2, int(number/2)):
+    for divider in range(2, int(number / 2)):
         if number % divider == 0:
             result = 1
             break

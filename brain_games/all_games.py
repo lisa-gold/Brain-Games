@@ -17,7 +17,7 @@ def accept_users_answer():
     return user_answer
 
 
-def is_integer(input_answer):
-    if (input_answer.isnumeric() is True or
-            (input_answer[0] == '-' and input_answer[1:].isnumeric() is True)):
+def is_integer(data):
+    if (data.isnumeric() is True or
+            (data[0] == '-' and data[1:].isnumeric() is True)):
         return True
