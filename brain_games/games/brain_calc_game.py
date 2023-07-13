@@ -1,6 +1,7 @@
 from random import randint
 from brain_games.all_games import NUMBER_OF_TRIES
 from brain_games.all_games import accept_users_answer
+from brain_games.all_games import is_integer
 
 
 def introduce_rules():
@@ -29,7 +30,7 @@ def check_answer(users_name):
         number_1 = question[0]
         number_2 = question[2]
         operator = question[1]
-        answer = int(accept_users_answer())
+        answer = accept_users_answer()
 
         match operator:
             case '+':
@@ -39,7 +40,7 @@ def check_answer(users_name):
             case '*':
                 right_answer = number_1 * number_2
 
-        if right_answer == answer:
+        if is_integer(answer) is True and right_answer == int(answer):
             print('Correct!')
             i = i + 1
             continue

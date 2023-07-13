@@ -1,6 +1,7 @@
 from random import randint
 from brain_games.all_games import NUMBER_OF_TRIES
 from brain_games.all_games import accept_users_answer
+from brain_games.all_games import is_integer
 
 
 def introduce_rules():
@@ -12,7 +13,7 @@ def show_progression(lenth, arr):
     arr_clone = arr[:]
     arr_clone[random_place] = '..'
     result_to_show = ''
-    for i in range(len(arr) - 1):
+    for i in range(lenth):
         result_to_show = result_to_show + str(arr_clone[i]) + ' '
     print(f'Question: {result_to_show}')
     return result_to_show, random_place
@@ -55,10 +56,11 @@ def check_answer(users_name):
     i = 1
     while i <= NUMBER_OF_TRIES:
         question = give_question()
-        answer = int(accept_users_answer())
         random_place = question[1]
         right_answer = question[0][random_place]
-        if right_answer == answer:
+        answer = accept_users_answer()
+
+        if is_integer(answer) is True and right_answer == int(answer):
             print('Correct!')
             i = i + 1
             continue
@@ -67,7 +69,6 @@ def check_answer(users_name):
 '{answer}' is wrong answer ;(. Correct answer was '{right_answer}'
 Let\'s try again, {users_name}!
             ''')
-            i = 1
             return
             break
 

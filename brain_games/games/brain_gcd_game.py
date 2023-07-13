@@ -2,6 +2,7 @@ from random import randint
 from math import gcd
 from brain_games.all_games import NUMBER_OF_TRIES
 from brain_games.all_games import accept_users_answer
+from brain_games.all_games import is_integer
 
 
 def introduce_rules():
@@ -21,11 +22,11 @@ def check_answer(users_name):
         question = give_question()
         number_1 = question[0]
         number_2 = question[1]
-        answer = int(accept_users_answer())
+        answer = accept_users_answer()
 
         right_answer = gcd(number_1, number_2)
 
-        if right_answer == answer:
+        if is_integer(answer) is True and right_answer == int(answer):
             print('Correct!')
             i = i + 1
             continue
