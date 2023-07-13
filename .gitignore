@@ -4,3 +4,7 @@
 
 # игнорирование кэш
 __pycache__
+.pytest_cache/
+
+# ignore 
+dist/
