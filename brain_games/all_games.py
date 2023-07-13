@@ -18,6 +18,6 @@ def accept_users_answer():
 
 
 def is_integer(data):
-    if (data.isnumeric() is True or
-            (data[0] == '-' and data[1:].isnumeric() is True)):
+    if (data.isnumeric() is True
+            or (data[0] == '-' and data[1:].isnumeric() is True)):
         return True
