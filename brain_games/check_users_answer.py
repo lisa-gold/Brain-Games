@@ -12,11 +12,6 @@ def give_question():
     return random_number
 
 
-def accept_users_answer():
-    user_answer = prompt.string('Your answer: ')
-    return user_answer
-
-
 def right_answer(number):
     if number % 2 == 0:
         right_answer = 'yes'
@@ -29,7 +24,7 @@ def check_answer(users_name):
     i = 1
     while i <= NUMBER_OF_TRIES:
         number = give_question()
-        answer = accept_users_answer()
+        answer = prompt.string('Your answer: ')
         correct_answer = right_answer(number)
 
         if correct_answer == answer:

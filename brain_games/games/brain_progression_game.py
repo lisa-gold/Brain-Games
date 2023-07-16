@@ -1,7 +1,4 @@
 from random import randint
-from brain_games.all_games import NUMBER_OF_TRIES
-from brain_games.all_games import accept_users_answer
-from brain_games.all_games import is_integer
 
 
 def introduce_rules():
@@ -52,24 +49,7 @@ def give_question():
     return result, place
 
 
-def check_answer(users_name):
-    i = 1
-    while i <= NUMBER_OF_TRIES:
-        question = give_question()
-        random_place = question[1]
-        right_answer = question[0][random_place]
-        answer = accept_users_answer()
-
-        if is_integer(answer) is True and right_answer == int(answer):
-            print('Correct!')
-            i = i + 1
-            continue
-        else:
-            print(f'''
-'{answer}' is wrong answer ;(. Correct answer was '{right_answer}'
-Let\'s try again, {users_name}!
-            ''')
-            return
-            break
-
-    return print(f'Congratulations, {users_name}!')
+def right_answer(arr):
+    random_place = arr[1]
+    right_answer = arr[0][random_place]
+    return right_answer
