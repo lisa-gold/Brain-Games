@@ -36,8 +36,6 @@ def check_answer(users_name):
 '{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'
 Let\'s try again, {users_name}!
             ''')
-            i = 1
             return
             break
-
     return print(f'Congratulations, {users_name}!')

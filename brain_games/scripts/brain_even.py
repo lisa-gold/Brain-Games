@@ -1,4 +1,4 @@
-from brain_games.cli import welcome_user
+import prompt
 from brain_games.check_users_answer import check_answer
 
 
@@ -7,7 +7,9 @@ def introduce_rules():
 
 
 def main():
-    name = welcome_user()
+    print('Welcome to the Brain Games!')
+    name = prompt.string('May I have your name? ')
+    print(f'Hello, {name}!')
     introduce_rules()
     check_answer(name)
 
