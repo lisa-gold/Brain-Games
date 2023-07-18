@@ -1,8 +1,7 @@
 from random import randint
 
 
-def introduce_rules():
-    print('What number is missing in the progression?')
+RULES = 'What number is missing in the progression?'
 
 
 def show_progression(lenth, arr):
@@ -12,7 +11,6 @@ def show_progression(lenth, arr):
     result_to_show = ''
     for i in range(lenth):
         result_to_show = result_to_show + str(arr_clone[i]) + ' '
-    print(f'Question: {result_to_show}')
     return result_to_show, random_place
 
 
@@ -45,11 +43,6 @@ def give_question():
 
     progression = show_progression(random_lenth, result)
     place = progression[1]
+    right_answer = result[place]
 
-    return result, place
-
-
-def right_answer(arr):
-    random_place = arr[1]
-    right_answer = arr[0][random_place]
-    return right_answer
+    return progression[0], right_answer

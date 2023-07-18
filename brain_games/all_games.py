@@ -5,37 +5,30 @@ import prompt
 NUMBER_OF_TRIES = 3
 
 
-def greet(introduce_rules):
+def play_game(RULES, give_question):
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
-    introduce_rules()
-    return name
-
-
-def is_integer(data):
-    if (data.isnumeric() is True
-            or (data[0] == '-' and data[1:].isnumeric() is True)):
-        return int(data)
-    return data
-
-
-def check_answer(give_question, right_answer, users_name):
+    print(RULES)
     i = 1
     while i <= NUMBER_OF_TRIES:
         question = give_question()
-        user_answer = is_integer(prompt.string('Your answer: '))
-        correct_answer = right_answer(question)
+        expression = ''
+        for element in question[:-1]:
+            expression = f'{expression}{element} '
+        print(f'Question: {expression}')
+        user_answer = prompt.string('Your answer: ')
+        correct_answer = question[-1]
 
-        if correct_answer == user_answer:
+        if str(correct_answer) == user_answer:
             print('Correct!')
             i = i + 1
             continue
         else:
             print(f'''
 '{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'
-Let\'s try again, {users_name}!
+Let\'s try again, {name}!
             ''')
             return
             break
-    return print(f'Congratulations, {users_name}!')
+    return print(f'Congratulations, {name}!')

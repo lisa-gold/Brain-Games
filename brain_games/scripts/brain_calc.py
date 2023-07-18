@@ -1,13 +1,10 @@
-from brain_games.all_games import greet
-from brain_games.games.brain_calc_game import introduce_rules
+from brain_games.games.brain_calc_game import RULES
 from brain_games.games.brain_calc_game import give_question
-from brain_games.games.brain_calc_game import right_answer
-from brain_games.all_games import check_answer
+from brain_games.all_games import play_game
 
 
 def main():
-    name = greet(introduce_rules)
-    check_answer(give_question, right_answer, name)
+    play_game(RULES, give_question)
 
 
 if __name__ == '__main__':
