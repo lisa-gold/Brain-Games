@@ -17,4 +17,5 @@ def give_question():
         right_answer = 'yes'
     else:
         right_answer = 'no'
+
     return random_number, right_answer
