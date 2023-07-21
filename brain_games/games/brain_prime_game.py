@@ -4,18 +4,21 @@ from random import randint
 RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def give_question():
-    random_number = randint(1, 99)
-    result = 0
-    for divider in range(2, int(random_number / 2) + 1):
-        if random_number % divider == 0:
-            result = 1
+def is_prime(number):
+    for divider in range(2, int(number / 2) + 1):
+        if number % divider == 0:
+            return False
             break
         continue
+    return True
 
-    if result == 0:
-        right_answer = 'yes'
-    else:
-        right_answer = 'no'
 
-    return random_number, right_answer
+def give_question():
+    random_number = randint(1, 99)
+    match is_prime(random_number):
+        case True:
+            right_answer = 'yes'
+        case False:
+            right_answer = 'no'
+    expression = f'{random_number}'
+    return expression, right_answer

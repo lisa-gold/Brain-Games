@@ -12,10 +12,7 @@ def play_game(game):
     print(game.RULES)
     for i in range(0, NUMBER_OF_TRIES):
         question = game.give_question()
-        expression = ''
-        for element in question[:-1]:
-            expression = f'{expression}{element} '
-        print(f'Question: {expression}')
+        print(f'Question: {question[0]}')
         user_answer = prompt.string('Your answer: ')
         correct_answer = question[-1]
 
@@ -27,6 +24,6 @@ def play_game(game):
 '{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'
 Let\'s try again, {name}!
             ''')
-            return
             break
-    return print(f'Congratulations, {name}!')
+    else:
+        print(f'Congratulations, {name}!')

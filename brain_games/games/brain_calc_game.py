@@ -18,5 +18,5 @@ def give_question():
         case 3:
             random_operation = '*'
             right_answer = random_number_1 * random_number_2
-
-    return random_number_1, random_operation, random_number_2, str(right_answer)
+    expression = f'{random_number_1} {random_operation} {random_number_2}'
+    return expression, str(right_answer)

@@ -10,4 +10,5 @@ def give_question():
         right_answer = 'yes'
     else:
         right_answer = 'no'
-    return random_number, right_answer
+    expression = f'{random_number}'
+    return expression, right_answer
