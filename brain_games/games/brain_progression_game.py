@@ -45,4 +45,4 @@ def give_question():
     place = progression[1]
     right_answer = result[place]
 
-    return progression[0], right_answer
+    return progression[0], str(right_answer)

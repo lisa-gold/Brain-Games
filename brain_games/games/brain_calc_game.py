@@ -19,4 +19,4 @@ def give_question():
             random_operation = '*'
             right_answer = random_number_1 * random_number_2
 
-    return random_number_1, random_operation, random_number_2, right_answer
+    return random_number_1, random_operation, random_number_2, str(right_answer)

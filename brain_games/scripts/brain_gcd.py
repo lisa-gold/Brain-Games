@@ -1,10 +1,9 @@
-from brain_games.games.brain_gcd_game import RULES
-from brain_games.games.brain_gcd_game import give_question
+import brain_games.games.brain_gcd_game as gcd
 from brain_games.all_games import play_game
 
 
 def main():
-    play_game(RULES, give_question)
+    play_game(gcd)
 
 
 if __name__ == '__main__':

@@ -1,17 +1,9 @@
-import prompt
-from brain_games.check_users_answer import check_answer
-
-
-def introduce_rules():
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+import brain_games.games.brain_even_game as even
+from brain_games.all_games import play_game
 
 
 def main():
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
-    introduce_rules()
-    check_answer(name)
+    play_game(even)
 
 
 if __name__ == '__main__':

@@ -1,10 +1,9 @@
-from brain_games.games.brain_progression_game import RULES
-from brain_games.games.brain_progression_game import give_question
+import brain_games.games.brain_progression_game as progression
 from brain_games.all_games import play_game
 
 
 def main():
-    play_game(RULES, give_question)
+    play_game(progression)
 
 
 if __name__ == '__main__':
