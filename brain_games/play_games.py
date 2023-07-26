@@ -5,25 +5,26 @@ import prompt
 NUMBER_OF_TRIES = 3
 
 
-def play_game(game):
+def play(game):
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
     print(game.RULES)
-    for i in range(0, NUMBER_OF_TRIES):
-        question = game.give_question()
-        print(f'Question: {question[0]}')
+    # ask a question, accept an answer,
+    # compare user's answer and the correct one, give feedback
+    for _ in range(0, NUMBER_OF_TRIES):
+        question, correct_answer = game.give_question()
+        print(f'Question: {question}')
         user_answer = prompt.string('Your answer: ')
-        correct_answer = question[-1]
 
-        if correct_answer == user_answer:
-            print('Correct!')
-            continue
-        else:
+        if correct_answer != user_answer:
             print(f'''
 '{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'
 Let\'s try again, {name}!
             ''')
             break
+        print('Correct!')
+        continue
+
     else:
         print(f'Congratulations, {name}!')
