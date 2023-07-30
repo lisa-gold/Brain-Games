@@ -1,10 +1,19 @@
-Project #1
+### Project #1. Brain Games
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/lisa-gold/python-project-49/workflows/hexlet-check/badge.svg)](https://github.com/lisa-gold/python-project-49/actions)
 
 ### CodeClimate Badge
 [![Maintainability](https://api.codeclimate.com/v1/badges/3cefe61c523850122157/maintainability)](https://codeclimate.com/github/lisa-gold/python-project-49/maintainability)
+
+### Description:
+This is a game that asks you mathematical questions. You should give 3 correct answers in a row for each question.
+
+### Installation:
+make package-install
+
+### Requirements:
+Python 3.10
 
 ### Record - brain-even
 <a href="https://asciinema.org/a/cKBLPg30BMvG3vXlYB53VQqKz" target="_blank"><img src="https://asciinema.org/a/cKBLPg30BMvG3vXlYB53VQqKz.svg" /></a>

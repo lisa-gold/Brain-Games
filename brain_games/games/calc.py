@@ -4,7 +4,7 @@ from random import choice
 RULES = 'What is the result of the expression?'
 
 
-def give_question():
+def generate_question_and_answer():
     random_number_1 = randint(0, 99)
     random_number_2 = randint(0, 99)
     random_operator = choice('+-*')

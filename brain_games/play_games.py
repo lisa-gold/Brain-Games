@@ -10,10 +10,8 @@ def play(game):
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
     print(game.RULES)
-    # ask a question, accept an answer,
-    # compare user's answer and the correct one, give feedback
     for _ in range(0, NUMBER_OF_TRIES):
-        question, correct_answer = game.give_question()
+        question, correct_answer = game.generate_question_and_answer()
         print(f'Question: {question}')
         user_answer = prompt.string('Your answer: ')
 
@@ -24,7 +22,6 @@ Let\'s try again, {name}!
             ''')
             break
         print('Correct!')
-        continue
 
     else:
         print(f'Congratulations, {name}!')

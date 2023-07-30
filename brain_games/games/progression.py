@@ -14,20 +14,16 @@ def generate_progression(first_number, length, progressor):
     return result
 
 
-def give_question():
-    # генерация прогрессии
+def generate_question_and_answer():
     number = randint(-99, 99)
     random_progressor = randint(-9, 9)
     random_length = randint(MIN_LENGTH, MAX_LENGTH)
     progression = generate_progression(number, random_length, random_progressor)
 
-    # скрытие элемента прогрессии
     random_place = randint(0, random_length - 1)
     progres_clone = progression[:]
     progres_clone[random_place] = '..'
-    progression_to_show = ''
-    for i in range(random_length):
-        progression_to_show = progression_to_show + str(progres_clone[i]) + ' '
+    progression_to_show = ' '.join(map(str, progres_clone))
 
     expression = f'{progression_to_show}'
     right_answer = progression[random_place]
