@@ -3,8 +3,6 @@ from math import sqrt
 
 
 RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-START = -99
-FINISH = 99
 
 
 def is_prime(number):
@@ -17,7 +15,7 @@ def is_prime(number):
 
 
 def generate_question_and_answer():
-    random_number = randint(START, FINISH)
+    random_number = randint(-99, 99)
     if is_prime(random_number):
         right_answer = 'yes'
     else:

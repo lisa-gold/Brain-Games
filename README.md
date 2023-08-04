@@ -7,7 +7,8 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/3cefe61c523850122157/maintainability)](https://codeclimate.com/github/lisa-gold/python-project-49/maintainability)
 
 ### Description:
-This is a game that asks you mathematical questions. You should give 3 correct answers in a row for each question.
+This is a game that asks you mathematical questions. You should give 3 correct answers in a row for each question to win.
+To start write game's name.
 
 ### Installation:
 make package-install
